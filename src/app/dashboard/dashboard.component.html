@@ -1,0 +1,7 @@
+<h2>Top Equipment Card</h2>
+<ul>
+  <li class="equipment-card" *ngFor="let card of equipmentCards">
+    <a [routerLink]="['/equipment-card-detail', card.id]">{{card.name}}</a>
+  </li>
+</ul>
+ 

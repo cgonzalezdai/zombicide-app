@@ -1,0 +1,14 @@
+<div class="equipment-card-detail" *ngIf="equipmentCard">
+  <h2>{{equipmentCard.name}}</h2>
+  <img width="100%" height="auto" src="../../assets/images/equipment-cards/{{equipmentCard.imagen}}" alt="">
+  <div><label>id: </label>{{equipmentCard.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="equipmentCard.name" class="form-control" placeholder="name"/>
+	<label>description: </label>
+    <input [(ngModel)]="equipmentCard.description" class="form-control" placeholder="description"/>
+    <label>special: </label>
+    <input [(ngModel)]="equipmentCard.special" class="form-control" placeholder="special"/>
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>

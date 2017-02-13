@@ -1,0 +1,18 @@
+<h2>Equipment Cards</h2>
+<div class="h-slider">
+  <ul>
+    <li class="equipment-card" *ngFor="let card of equipmentCards"
+      [class.selected]="card === selectedEquipmentCard"
+      (click)="onSelect(card)">
+      	<img width="200px" height="auto" src="../../assets/images/equipment-cards/{{card.imagen}}" alt="">
+        <!-- <a [routerLink]="['/equipment-card-detail', card.id]"></a> -->
+    </li>
+  </ul>
+ </div> 
+<!-- <equipment-card-detail [equipmentCard]="selectedEquipmentCard"></equipment-card-detail> -->
+<div *ngIf="selectedEquipmentCard">
+  <span>
+    You have selected the {{selectedEquipmentCard.name | uppercase}} equipment card.
+  </span>
+  <a (click)="gotoDetail()">Click here to view details</a>
+</div>
